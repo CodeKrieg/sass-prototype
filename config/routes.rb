@@ -6,6 +6,4 @@ Rails.application.routes.draw do
   #Root route
   root 'welcome#index'
   
-  
-
 end

@@ -1,0 +1,22 @@
+.navbar-default {
+    // Gradiant
+    background: #70e1f5; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #70e1f5 , #ffd194); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #70e1f5 , #ffd194); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    // Shadow
+    -webkit-box-shadow: 0 0.3em 0.25em -0.25em #999;
+    -moz-box-shadow: 0 0.3em 0.25em -0.25em #999;
+    box-shadow: 0 0.3em 0.25em -0.25em #999;
+    
+    // No border on the navigation bar
+    border-bottom: none;
+}
+
+.ck-authentication-button {
+    border: 1px solid #b2b2b2;
+    border-radius: 15%;
+    color: #b2b2b2 !important;
+    font-weight: 700;
+    margin-right: 0.5em;
+}

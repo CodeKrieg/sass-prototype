@@ -1,0 +1,27 @@
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">ChatApp</a>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Link1", "/path1"  %></li>
+        <li><%= link_to "Link2", "/path2"  %></li>
+        <li><%= link_to "Link3", "/path3"  %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <li><%= link_to "logout", destroy_user_session_path, method: :delete, :class => "ck-authentication-button btn-small" %></li>
+        <% else %>
+          <li><%= link_to "Sign in", new_user_session_path, :class => "btn ck-authentication-button btn-small" %> </li>
+          <li><%= link_to "Sign up", new_user_registration_path, :class => "btn ck-authentication-button btn-small" %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+

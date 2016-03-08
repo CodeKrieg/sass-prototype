@@ -1,26 +1,52 @@
-<div class="panel panel-default devise-bs">
-  <div class="panel-heading">
-    <h4><%= t('.sign_in', :default => "Sign in") %></h4>
-  </div>
-  <div class="panel-body">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form" }) do |f| %>
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-      </div>
-      <% if devise_mapping.rememberable? %>
-        <div class="checkbox">
-          <%= f.label :remember_me do %>
-            <%= f.check_box :remember_me %>remember me
+ <div class="container ck-form-holder">
+   <div class="row">
+         <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default devise-bs">
+        <div class="panel-heading">
+          <h4><%= t('.sign_in', :default => "Sign in") %></h4>
+        </div>
+        <div class="panel-body">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form" }) do |f| %>
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, autofocus: true, class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :password %>
+              <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+            </div>
+            <% if devise_mapping.rememberable? %>
+              <div class="checkbox">
+                <%= f.label :remember_me do %>
+                  <%= f.check_box :remember_me %>remember me
+                <% end %>
+              </div>
+            <% end %>
+            <%= f.submit  t('.sign_in', :default => "Sign in"), class: "btn btn-primary" %>
           <% end %>
         </div>
+        
+      </div>
+      <%= render "devise/shared/links" %>
+      <h5> or Sign in using:  </h5>
+      <%= link_to user_omniauth_authorize_path(:facebook) do  %>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-stack-1x fa-facebook"></i>
+        </span>
       <% end %>
-      <%= f.submit  t('.sign_in', :default => "Sign in"), class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
-<%= render "devise/shared/links" %>
+      
+      <%= link_to user_omniauth_authorize_path(:github) do %>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+           <i class='fa fa-stack-1x fa-github'></i>
+        </span>
+      <% end %><br>
+        <%= link_to root_path class: 'ck-links' do %>
+          <i class="fa fa-1x fa-arrow-circle-o-left">
+            Go Back!
+          </i>
+          <% end %>
+    </div>
+   </div>
+ </div>  
