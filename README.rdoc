@@ -1,0 +1,47 @@
+== README
+
+== Stages that need to be followed !! 
+
+ [IMPORTANT] Find a design patern for the application, something that would be pleasant to look at
+ 
+ [Basic stuff] Git, GitHub and Heroku 
+ [Basic stuff] Get Bootstrap
+
+ 
+ [Back-end] Work on authentication and users
+            => Devise for basic email & password sign-up / sign-in
+                => Install devise 
+                => Setup sign-up / sign-in 
+                => Setup email confirmation
+                => Design Devise views 
+               
+            => OmniAuth for sign-up / sign-in from different platforms (Google, Facebook, Twitter, GitHub) 
+                => Install OmniAuth
+                => Setup sign-up / sign-in 
+                => Design OmniAuth views
+                
+            => TDD authentication 
+ 
+ [Back-end] Relationship between Users and Messages
+                
+                
+ [Back-end] Work on the messaging logic (Feya and public_pub) 
+            => Feya
+                => Install Feya
+                => Setup Feya server
+               
+            => private_pub 
+                => Install public_pub
+                => Setup public_pub
+                
+            => TDD messaging logic 
+             
+                 
+ [Front-end] Design and style the messaging interface
+ [Front-end] Design navigation bar and footer
+ [Front-end] Fully design the home page
+ [Front-end] Fully design the about page
+ [Front-end] Fully design the chat interface
+ 
+== USER STORIES
+
