@@ -6,11 +6,17 @@ gem 'rails', '4.2.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
-#Bootstrap
+#Styling
 gem 'twitter-bootstrap-rails'
-#Devise
-gem 'devise'
 gem 'devise-bootstrap-views'
+
+#Auth
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google'
+gem 'omniauth-github'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

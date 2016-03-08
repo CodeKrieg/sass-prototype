@@ -4,8 +4,8 @@
 
  [IMPORTANT] Find a design patern for the application, something that would be pleasant to look at
  
- [Basic stuff] Git, GitHub and Heroku 
- [Basic stuff] Get Bootstrap
+ [Basic stuff] Git, GitHub and Heroku (DONE)
+ [Basic stuff] Get Bootstrap (DONE)
 
  
  [Back-end] Work on authentication and users
