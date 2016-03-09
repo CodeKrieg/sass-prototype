@@ -263,7 +263,10 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   
-  config.omniauth :facebook, "1567607740218195", "b823a8f135861ab4e7bb61bb34d20e67"
-  config.omniauth :github, "03c04652a103194eb732", "7e75f76ac016fdd0d5304e8af95d07d33428b694"
+  config.omniauth :facebook, "1567607740218195", "b823a8f135861ab4e7bb61bb34d20e67",
+                  callback_url: "hidden-fjord-37231.herokuapp.com"
+                  
+  config.omniauth :github, "03c04652a103194eb732", "7e75f76ac016fdd0d5304e8af95d07d33428b694",
+                  callback_url: "hidden-fjord-37231.herokuapp.com"
   
 end
