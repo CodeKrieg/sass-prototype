@@ -1,0 +1,104 @@
+<div class="container-fluid">
+  
+  <%= render 'layouts/profile_side_bar' %>
+  
+  <% if @friendships.size > 0 %>
+  
+  <div class="row">
+    
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ck-content-profile">
+      <div class="panel panel-default devise-bs">
+        <div class="panel-heading">
+          <h2 align="center">Search for friends</h2>
+        </div>
+        <div class="panel-body">
+          <%= render 'friends/lookup' %>
+        </div>
+      </div>
+      <!--FIRST PANEL-->
+      <!--User has friends added-->
+      <div class="panel panel-default devise-bs">
+        <div class="panel-heading">
+          <h2 align="center">My Friends</h2>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-4">
+              <h4 class="ck-heading text-center">Name</h4>
+              <hr/>
+            </div>
+            <div class="col-xs-4">
+              <h4 class="ck-heading text-center">Email</h4>
+              <hr/>
+            </div>
+            <div class="col-xs-4">
+               <h4 class="ck-heading text-center">Actions</h4>
+               <hr/>
+            </div>
+          </div>
+          <div class="row">
+          <!--This will create 3 column tabular data row-->
+          <% @friendships.each do |friend| %>
+            <!--User name and image-->
+            <div class="col-xs-4 ck-columns">
+               <!--<li class="round">image</li>-->
+               <%= friend.full_name %>
+            </div>
+            <!--User email-->
+            <div class="col-xs-4 ck-columns">
+              <%= friend.email %>
+            </div>
+            <!--User options-->
+            <div class="col-xs-4 ck-columns">
+              <%= link_to "View Profile", user_path(friend), class: "btn btn-primary btn-xs" %>
+              <%= link_to 'Remove Friend', friendship_path(friend), :method => :delete, 
+                          :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-xs btn-danger' %>
+            </div>
+          <% end %>
+          <hr>
+          <!--/. logic-->
+          </div>
+        </div>
+      </div>
+      <!-- /. first panel-->
+      
+      <!--SECOND PANEL-->
+      <!--User has no friends added-->
+    <% else %>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ck-content-profile">
+        <div class="panel panel-default devise-bs">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-12">
+              <h2 align="center">Ohh...</h2>
+            </div>
+          </div>
+        </div>
+        
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-12">
+              <p align="center" class="lead">You don't have any friends yet. Why don't you add some?</p>
+              <%= render 'friends/lookup' %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/. second panel-->
+      </div>
+      
+    <% end %>
+    <!--/. logic-->
+    </div>
+    
+  </div>
+  <!--row-->
+  
+  </div>
+<!--/. container-->
+
+
+  
+
+
+

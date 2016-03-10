@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row">
+    
+    <%= render 'layouts/profile_side_bar' %>
+    
+    <!--Content-->
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ck-content-profile">
+      <div class="panel panel-default devise-bs">
+        <div class="panel-heading">
+          <h1 class="page-header">My profile</h1>
+            <div class="row ck-profile-images">
+              <div class="col-xs-6 col-sm-3 ck-profile-image">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                <h4><%= current_user.full_name%></h4>
+              </div>
+            </div>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-2 col-xs-offset-10 ck-columns">
+              <%= link_to "View Profile As", user_path(current_user), class: "btn btn-primary btn-xs" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

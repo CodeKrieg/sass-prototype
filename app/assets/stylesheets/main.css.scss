@@ -16,9 +16,22 @@ body {
     margin-bottom: 2.5em;
 }
 
+.ck-columns {
+  
+}
+
+.ck-small {
+  
+}
+
 // ==================
 // Import files
 // ==================
 @import 'nav';
 @import 'auth';
+@import 'user';
 @import 'footer';
+
+
+// Copyright CodeKrieg 2016
+// Senior developers: Paul Badarau & Himanshu Patel

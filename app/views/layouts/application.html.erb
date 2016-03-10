@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
     <title><%= content_for?(:title) ? yield(:title) : "ChatApp" %></title>
     <%= csrf_meta_tags %>
 
@@ -46,25 +47,29 @@
       <div class="row">
         <div class="col-lg-9">
           <%= bootstrap_flash %>
-          <%= yield %>
         </div>
         
-              <!--SIDEBAR-->
+        <!--SIDEBAR-->
         <!--<div class="col-lg-3">-->
-        <!--  <div class="well sidebar-nav">-->
-        <!--    <h3>Sidebar</h3>-->
-        <!--    <ul class="nav nav-list">-->
-        <!--      <li class="nav-header">Sidebar</li>-->
-        <!--      <li><%= link_to "Link1", "/path1"  %></li>-->
-        <!--      <li><%= link_to "Link2", "/path2"  %></li>-->
-        <!--      <li><%= link_to "Link3", "/path3"  %></li>-->
-        <!--    </ul>-->
-        <!--  </div><!--/.well -->
-        <!--</div><!--/span-->
+          <!--<div class="well sidebar-nav">-->
+            <!--<h3>Sidebar</h3>-->
+            <!--<ul class="nav nav-list">-->
+              <!--<li class="nav-header">Sidebar</li>-->
+              <!--<li><%= link_to "Link1", "/path1"  %></li>-->
+              <!--<li><%= link_to "Link2", "/path2"  %></li>-->
+              <!--<li><%= link_to "Link3", "/path3"  %></li>-->
+            <!--</ul>-->
+          <!--</div> -->
+          <!--/.well-->
+        <!--</div>-->
+        <!--/. sidebar-->
         
-        
-      </div><!--/row-->
-    </div> <!-- /container -->
+      </div>
+      
+       <%= yield %>
+      <!--/. row-->
+    </div> 
+    <!-- /. container -->
     
     <% unless current_page?('/users/sign_in') || current_page?('/users/sign_up') %>
       <%= render 'layouts/footer' %>

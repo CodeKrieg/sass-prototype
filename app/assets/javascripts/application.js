@@ -13,5 +13,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require turbolinks
+//= require private_pub
+//  require turbolinks
 //= require_tree .
+
+var hide_spinner = function(){
+  $('#spinner').hide();
+}
+
+var show_spinner = function(){
+  $('#spinner').show();
+}
+
+
+// Copyright CodeKrieg 2016
+// Senior developers: Paul Badarau & Himanshu Patel

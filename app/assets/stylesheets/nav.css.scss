@@ -20,3 +20,25 @@
     font-weight: 700;
     margin-right: 0.5em;
 }
+
+.ck-badge{
+    font-weight: 700;
+    height: auto;
+    margin-top: 0.65em;
+    .badge{
+        background-color: #b2b2b2;
+        margin-right: 20px;
+        height: auto;
+         a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 1000;
+        }
+    }
+}
+.ck-button{
+    margin-top: 0.60em;
+}
+
+// Copyright CodeKrieg 2016
+// Senior developers: Paul Badarau & Himanshu Patel
