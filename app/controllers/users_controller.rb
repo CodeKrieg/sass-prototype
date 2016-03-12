@@ -1,20 +1,21 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!
     
+    def index
+      @users = User.where.not("id = ?",current_user.id).order("created_at DESC")
+      @conversations = Conversation.involving(current_user).order("created_at DESC")
+    end
+    
     def show
         @user = User.find(params[:id])
     end
+    
     
     def my_friends
         @friendships = current_user.friends
         
     end
-    
-    def convo
-      @users = User.where.not("id = ?",current_user).order("created_at DESC") #chat line1
-      @conversations = Conversation.involving(current_user).order("created_at DESC") #chat line2
-    end
-    
+
     def my_profile
         
     end

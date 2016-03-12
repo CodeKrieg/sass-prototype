@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require private_pub
-//  require turbolinks
 //= require chat
 //= require_tree .
 
