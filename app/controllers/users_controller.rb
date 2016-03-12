@@ -2,8 +2,7 @@ class UsersController < ApplicationController
     before_action :authenticate_user!
     
     def index
-      @users = User.where.not("id = ?",current_user.id).order("created_at DESC")
-      @conversations = Conversation.involving(current_user).order("created_at DESC")
+      
     end
     
     def show
@@ -13,7 +12,11 @@ class UsersController < ApplicationController
     
     def my_friends
         @friendships = current_user.friends
+        @users = User.where.not("id = ?",current_user.id).order("created_at DESC")
+        @conversations = Conversation.involving(current_user).order("created_at DESC")
         
+        # @users = User.where.not current_user.id
+        # @conversations = Conversation.involving(current_user)
     end
 
     def my_profile

@@ -3,14 +3,10 @@ Rails.application.routes.draw do
   #Auth routes
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks", :registrations => "user/registrations" }
   
-  
-  #Root route
-   # root 'welcome#index'
-  
   #Friend list page
   get 'my_friends', to: 'users#my_friends'
   
-  get 'chat', to: 'users#index'
+  get 'connect', to: 'users#index'
   
   #User profile
   get 'my_profile', to: 'users#my_profile'
@@ -23,14 +19,15 @@ Rails.application.routes.draw do
     resources :messages
   end
   
-  # From the github
+  # root => if user is authenticated
    authenticated :user do
-    root 'users#index'
+    root 'users#my_profile'
   end
-
+  
+  # root => if user is not authenticated
   unauthenticated :user do
     devise_scope :user do
-      get "/" => "devise/sessions#new"
+      get "/" => "welcome#index"
     end
   end
   
