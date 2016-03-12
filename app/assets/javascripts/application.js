@@ -15,6 +15,7 @@
 //= require twitter/bootstrap
 //= require private_pub
 //  require turbolinks
+//= require chat
 //= require_tree .
 
 var hide_spinner = function(){
@@ -25,6 +26,9 @@ var show_spinner = function(){
   $('#spinner').show();
 }
 
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 
 // Copyright CodeKrieg 2016
 // Senior developers: Paul Badarau & Himanshu Patel

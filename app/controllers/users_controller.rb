@@ -7,6 +7,12 @@ class UsersController < ApplicationController
     
     def my_friends
         @friendships = current_user.friends
+        
+    end
+    
+    def convo
+      @users = User.where.not("id = ?",current_user).order("created_at DESC") #chat line1
+      @conversations = Conversation.involving(current_user).order("created_at DESC") #chat line2
     end
     
     def my_profile

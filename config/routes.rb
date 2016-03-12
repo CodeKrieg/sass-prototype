@@ -15,11 +15,15 @@ Rails.application.routes.draw do
   #Resources
   resources :users, only: [:show]
   resources :friendships
-
+  
+  resources :conversations do
+    resources :messages
+  end
   #Friendships
   get 'search_friends', to: 'users#search'
   post 'add_friend', to: 'users#add_friend'
   get 'add_friend', to: 'users#add_friend'
+  get 'convo', to: 'users#convo'
   
   
 end

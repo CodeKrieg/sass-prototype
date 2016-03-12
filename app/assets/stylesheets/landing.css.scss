@@ -1,0 +1,50 @@
+.ck-landing {
+  background: url(https://unsplash.com/photos/RYyr-k3Ysqg) !important;
+}
+
+.ck-landing {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(https://unsplash.com/photos/RYyr-k3Ysqg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.ck-landing .ck-landing-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ck-landing .ck-landing-body .brand-heading {
+    font-size: 40px;
+    color: #777;
+}
+
+.ck-landing .ck-landing-body .ck-landing-text {
+    font-size: 18px;
+    color: #777;
+}
+
+@media(min-width:768px) {
+    .ck-landing {
+        height: 100%;
+        padding: 0;
+    }
+
+    .ck-landing .ck-landing-body .brand-heading {
+        font-size: 100px;
+        color: #777;
+    }
+
+    .ck-landing .ck-landing-body .ck-landing-text {
+        font-size: 26px;
+        color: #777;
+    }
+}

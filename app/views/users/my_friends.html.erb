@@ -6,13 +6,14 @@
   
   <div class="row">
     
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ck-content-profile">
+    <div class="col-xs-9 col-xs-offset-3 col-md-10 col-md-offset-2 ck-content-profile">
       <div class="panel panel-default devise-bs">
         <div class="panel-heading">
           <h2 align="center">Search for friends</h2>
         </div>
         <div class="panel-body">
           <%= render 'friends/lookup' %>
+          <a tabindex="0" class="btn btn-sm btn-info ck-hint" role="button" data-toggle="popover" data-trigger="focus" title="Looking for new friends?" data-content="Try searching '@' and meet new people!">hint</a>
         </div>
       </div>
       <!--FIRST PANEL-->
@@ -55,6 +56,7 @@
                           :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-xs btn-danger' %>
             </div>
           <% end %>
+          
           <hr>
           <!--/. logic-->
           </div>
@@ -80,6 +82,7 @@
             <div class="col-xs-12">
               <p align="center" class="lead">You don't have any friends yet. Why don't you add some?</p>
               <%= render 'friends/lookup' %>
+              <a tabindex="0" class="btn btn-sm btn-info ck-hint" role="button" data-toggle="popover" data-trigger="focus" title="Looking for new friends?" data-content="Try searching '@' and meet new people!">hint</a>
             </div>
           </div>
         </div>

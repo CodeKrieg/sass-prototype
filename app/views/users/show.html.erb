@@ -1,9 +1,46 @@
-<h2>User details</h2>
-  <dl class="dl-horizontal">
-    <dt><strong>Full Name</strong></dt>
-    <dd><%= @user.full_name %></dd>
-    <dt><strong>Email</strong></dt>
-    <dd><%= @user.email %></dd>
-  </dl>
-
-<%= link_to "Back", my_friends_path, class: 'btn btn-primary' %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-9 col-xs-offset-2 col-md-10 col-md-offset-1 ck-content-profile">
+      <div class="panel panel-default devise-bs">
+      <div class="panel-heading">
+          <h1 class="page-header"><%= @user.full_name %>'s profile</h1>
+            <div class="row ck-profile-images">
+              <div class="col-xs-6 col-sm-3 ck-profile-image">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+              
+              <div class="col-xs-6">
+                <div class="panel panel-default devise-bs">
+                  <div class="panel-heading">
+                    <h4 class="ck-heading ">Details</h4>
+                  </div>
+                  <div class="panel-body">
+                    <h6><strong>First name:</strong> <%= @user.first_name %></h6>
+                   <h6><strong>Last name:</strong> <%= @user.last_name %></h6>
+                   <h6><strong>Email:</strong> <%= @user.email %></h6>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-6">
+                <div class="panel panel-default devise-bs">
+                  <div class="panel-heading">
+                    <h4 class="ck-heading ">About</h4>
+                  </div>
+                  <div class="panel-body ck-about">
+                    <p>Text area where user could write a bit about him</p>
+                  </div>
+                </div>
+            </div>
+              
+          </div>
+          <%= link_to "Back", my_friends_path, class: 'btn btn-primary' %>
+        </div>
+    </div>
+  </div>
+</div>
+</div>

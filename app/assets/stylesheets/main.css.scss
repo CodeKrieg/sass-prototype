@@ -20,16 +20,23 @@ body {
   
 }
 
-.ck-small {
-  
+.ck-ruby-icon {
+  color: #C02F1D;
 }
 
+.ck-hr-small {
+  border-color: #C02F1D;
+  border-width: 2px;
+  max-width: 150px;
+}
 // ==================
 // Import files
 // ==================
 @import 'nav';
 @import 'auth';
 @import 'user';
+@import 'chat';
+@import 'landing';
 @import 'footer';
 
 
