@@ -17,7 +17,7 @@
           <li class="ck-badge">
              <span class="badge">
                <i class="fa fa-user fa-2x"></i>
-                <%= link_to  current_user.full_name.present? ? current_user.full_name : current_user.email || current_user.nickname, my_profile_path %>
+                <%= link_to  current_user.full_name.present? ? current_user.full_name : current_user.email, my_profile_path %>
              </span>
           </li>
           <%= link_to "logout", destroy_user_session_path, method: :delete, :class => "btn btn-danger btn-md ck-button" %>
