@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   #User profile
   get 'my_profile', to: 'users#my_profile'
   
-  #Resources
+  #Resource
   resources :users
   resources :friendships
   

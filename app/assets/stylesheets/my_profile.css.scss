@@ -1,0 +1,40 @@
+.ck-usernames {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 1em 0;
+}
+.ck-dividers {
+  width: 20.33%;
+  border-top: 1px solid #777777 !important;
+  position: absolute;
+  padding-bottom: 10em;
+  padding-left: 8em;
+  margin-top: 5em !important;
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);
+  
+}
+.ck-userdetails{
+  padding-left: 5em;
+  font-weight: 400;
+  
+}
+.ck-links{
+  text-decoration: none;
+  color: #fff;
+}
+
+.page-header{
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.ck-tooltips{
+  color: #31B0D5;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+// Copyright CodeKrieg 2016
+// Senior developers: Paul Badarau & Himanshu Patel
