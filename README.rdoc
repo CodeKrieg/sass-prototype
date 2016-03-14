@@ -3,7 +3,9 @@ Prototype for an upcomming product from the CodeKrieg.
 
 == About
 Do you have a team?
+
 No matter how big or small it is or just people who would like to connect with each other.. 
+
 The real time SaaS platform is developed to meet ends of small and big enterprises. A Ruby On Rails base chat software developed by CodeKrieg, a RoR software development company. 
 
 This a prototype only app. The final product will come soon.. stay tuned. 
