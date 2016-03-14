@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160313171552) do
+ActiveRecord::Schema.define(version: 20160313174713) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20160313171552) do
     t.string   "facebook"
     t.string   "gmail"
     t.string   "github"
+    t.string   "twitter"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

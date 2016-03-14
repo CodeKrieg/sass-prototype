@@ -22,7 +22,16 @@
 }
 .ck-links{
   text-decoration: none;
-  color: #fff;
+  color: #3071A9;
+  border: 0.15em solid #3071A9 ;
+  border-radius: 0.5em;
+  &:hover{
+    background-color: #3071A9;
+    color: #fff;
+  }
+  i{
+    padding: 0.15em;
+  }
 }
 
 .page-header{
@@ -34,7 +43,22 @@
   color: #31B0D5;
   font-size: 30px;
   vertical-align: middle;
+  &:hover{
+      -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  }
 }
+
+.ck-social{
+  li{
+    display: inline-block;
+    letter-spacing: 0.20em;
+    }
+}
+
 
 // Copyright CodeKrieg 2016
 // Senior developers: Paul Badarau & Himanshu Patel

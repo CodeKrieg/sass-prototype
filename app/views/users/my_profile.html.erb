@@ -11,7 +11,7 @@
             <div class="row ck-profile-images ">
               <div class="col-xs-6 col-sm-3 ck-profile-image">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                <h4 class="ck-usernames"><%= current_user.full_name || current_user.nickname %></h4>
+                <h4 class="ck-usernames"><%= current_user.full_name || current_user.name %></h4>
               </div>
               <hr class="divider ck-dividers"></hr>
               <div class="col-xs-6 col-sm-9 ck-userdetails">
@@ -21,11 +21,37 @@
         </div>
         <div class="panel-body">
           <div class="row">
-            <!--button with tooltips-->
-            <div class="col-xs-4 col-xs-offset-9 ck-columns">
-              <li class="list-unstyled"><%= link_to "View Profile As", user_path(current_user), class: "btn btn-info ck-links"  %>
-                  <span><i class="fa fa-2x fa-question-circle ck-tooltips" data-toggle="tooltip" data-placement="top" title="Profile view as other user"></i></span>
+          <!--social Icon -->
+            <div class="col-xs-8 ck-columns ck-social">
+              <% if current_user.twitter.present? %>
+              <li class="list-unstyled"><%=link_to current_user.twitter do %>
+                    <i class="fa fa-twitter ck-tooltips"></i>
+                  <% end %>
               </li>
+              <% end %>
+              <% if current_user.gmail.present? %>
+              <li class="list-unstyled"><%=link_to current_user.gmail do %>
+                    <i class="fa fa-google ck-tooltips"></i>
+                  <% end %>
+              </li>
+              <% end %>
+              <% if current_user.github.present? %>
+              <li class="list-unstyled"><%=link_to current_user.github do %>
+                    <i class="fa fa-github ck-tooltips"></i>
+                  <% end %>
+              </li>
+              <% end %>
+              <% if current_user.facebook.present? %>
+              <li class="list-unstyled"><%=link_to current_user.facebook do %>
+                    <i class="fa fa-facebook-official ck-tooltips"></i>
+                  <% end %>
+              </li>
+              <% end %>
+            </div>
+            <!--button with tooltips-->
+            <div class="col-xs-4  ck-columns">
+              <%= link_to "View Profile As", user_path(current_user), class: "btn btn-info ck-links"  %>
+                  <span><i class="fa fa-2x fa-question-circle ck-tooltips" data-toggle="tooltip" data-placement="top" title="Profile view as other user"></i></span>
               
             </div>
           </div>

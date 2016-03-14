@@ -36,4 +36,7 @@ Rails.application.routes.draw do
   post 'add_friend', to: 'users#add_friend'
   get 'add_friend', to: 'users#add_friend'
   
+  #About page
+  get 'company', to: 'welcome#about'
+  
 end

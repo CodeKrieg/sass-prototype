@@ -6,4 +6,8 @@ class WelcomeController < ApplicationController
         end
     end
     
+    def about
+        
+    end
+    
 end

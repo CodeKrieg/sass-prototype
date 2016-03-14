@@ -36,7 +36,43 @@
                   </div>
                 </div>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-9 ck-social">
+              <h4>Social Accounts</h4>
               
+              <!--Twitter social logic-->
+              <% if @user.twitter.present? %>
+                    <li class="list-unstyled"><%=link_to @user.twitter do %>
+                          <i class="fa fa-twitter ck-tooltips"></i>
+                        <% end %>
+                    </li>
+                  <% end %>
+                  
+              <!--Gmail social logic-->    
+                  <% if @user.gmail.present? %>  
+                    <li class="list-unstyled"><%=link_to @user.gmail do %>
+                          <i class="fa fa-google ck-tooltips"></i>
+                        <% end %>
+                    </li>
+                  <% end %> 
+              <!--Github social logic-->    
+              
+                  <% if @user.github.present? %>  
+                    <li class="list-unstyled"><%=link_to @user.github do %>
+                          <i class="fa fa-github ck-tooltips"></i>
+                        <% end %>
+                    </li>
+                    <% end %> 
+                    
+              <!--Facebook social logic-->      
+                  <% if @user.facebook.present? %>
+                    <li class="list-unstyled"><%=link_to @user.facebook do %>
+                          <i class="fa fa-facebook-official ck-tooltips"></i>
+                        <% end %>
+                    </li>
+                  <% end %>  
+              </div>
           </div>
           <%= link_to "Back", my_friends_path, class: 'btn btn-primary' %>
         </div>
